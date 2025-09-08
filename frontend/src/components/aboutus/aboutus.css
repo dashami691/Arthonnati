@@ -1,0 +1,347 @@
+:root {
+  --primary-color: #0056A3;
+  --primary-dark: #003e7e;
+  --text-color: #222;
+  --text-muted: #555;
+  --white: #fff;
+}
+
+/* Section Layout */
+.aboutus-section {
+  background-color: var(--white);
+  padding: 60px 20px;
+}
+
+/* Section Heading */
+.section-head.center.wt-small-separator-outer {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.wt-small-separator {
+  font-family: "Heebo", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: inline-block;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.sep-leaf-left {
+  position: relative;
+}
+
+.sep-leaf-left::before,
+.sep-leaf-left::after {
+  content: '';
+  position: absolute;
+  height: 22px;
+  top: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  transform: skew(-20deg);
+}
+
+.sep-leaf-left::before {
+  right: -20px;
+  width: 10px;
+}
+
+.sep-leaf-left::after {
+  right: -27px;
+  width: 4px;
+}
+
+/* Card Container */
+.about-card-container {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0, 86, 163, 0.07);
+  border: 1px solid #e7e7e7;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about-card-container:hover {
+  box-shadow: 0 8px 40px rgba(0, 86, 163, 0.15);
+  transform: translateY(-6px);
+}
+
+/* Left Side */
+.about-card-left {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+.partner-section p {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+.partner-logo {
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Right Side */
+.about-card-right {
+  flex: 2;
+}
+
+.company-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.designation {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.arn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Contact Info */
+.contact-info p {
+  margin-bottom: 10px;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.contact-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-card-container {
+    flex-direction: column;
+    padding: 28px 20px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .wt-title {
+    font-size: 2rem;
+  }
+
+  .company-name {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-full {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .wt-title {
+    font-size: 1.5rem;
+  }
+
+  .about-card-container {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutus-section {
+    padding: 30px 5px;
+  }
+
+  .about-heading-wrapper {
+    font-size: 18px;
+    margin-bottom: 24px;
+    gap: 6px;
+  }
+
+  .about-card-container {
+    flex-direction: column;
+    gap: 14px;
+    padding: 12px 4px;
+    max-width: 99vw;
+    min-width: 0;
+  }
+
+  .profile-img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .arn,
+  .designation,
+  .description,
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .wt-small-separator {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 350px) {
+  .aboutus-section {
+    padding: 12px 2px;
+  }
+  .about-heading-wrapper {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .about-card-container {
+    padding: 4px 0;
+    gap: 6px;
+  }
+  .profile-img {
+    width: 60px;
+    height: 60px;
+  }
+  .company-name,
+  .name {
+    font-size: 0.9rem;
+  }
+  .arn,
+  .designation,
+  .description,
+  .contact-info p {
+    font-size: 0.75rem;
+  }
+  .wt-small-separator {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+}
+
+.about-heading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0056A3;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.about-icon-css {
+  display: inline-block;
+  width: 12px;
+  height: 30px;
+  background-color: #0056A3;
+  transform: skewX(-20deg);
+  position: relative;
+}
+
+.about-icon-css::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(50%) skewX(20deg);
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 2px;
+  right: 50%;
+  top: 0;
+}
+
+.about-icon-css::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%) skewX(20deg);
+  background-color: var(--primary-color);
+  height: 100%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.wt-small-separator {
+  margin-top: 50px; /* 👈 Add this line */
+  font-family: "Heebo", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 26px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
