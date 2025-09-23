@@ -13,10 +13,11 @@ app.post("/api/contact", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "arthonnati.fs@gmail.com",      // replace with your email
-      pass: "blpc nqpi armg okme",         // use an app password, not your real password
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
   });
+
 
   const mailOptions = {
     from: email,
