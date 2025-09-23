@@ -3,7 +3,10 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://arthonnati-frontend.onrender.com", "http://localhost:3000"],
+  methods: ["POST"]
+}));
 app.use(express.json());
 
 app.post("/api/contact", async (req, res) => {
