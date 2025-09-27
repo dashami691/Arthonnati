@@ -1,39 +1,37 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./slider.css";
+import img1 from './1.png';
+import img2 from './2.png';
+import img3 from './3.png';
+import img4 from './4.png';
+import img5 from './5.png';
+import img6 from './6.png';
 
 const posts = [
   {
     title: "Your True Partner for Wealth Creation",
-    imageSrc: "https://www.sherweb.com/blog/wp-content/uploads/5-ways-to-grow-your-MSP-business-1200x480-1.jpg", // Place main.jpeg in public/
+    imageSrc: img1,
   },
   {
     title: "Your True Partner for Wealth Creation",
-    imageSrc: "https://mir-s3-cdn-cf.behance.net/projects/max_808/1a19d834759223.Y3JvcCw4NTgsNjcxLDAsODQ.jpg", // Place main.jpeg in public/
+    imageSrc: img2,
   },
   {
     title: "Your True Partner for Wealth Creation",
-    imageSrc: "https://www.sherweb.com/blog/wp-content/uploads/5-ways-Sherweb-empowers-MSP-growth-1200x480-1.jpg", // Place main.jpeg in public/
+    imageSrc: img3,
   },
-  // {
-  //   title: "Alumni Spotlight: AI in Healthcare",
-  //   excerpt:
-  //     "Meet the graduate who's revolutionizing patient care with AI-powered diagnostics",
-  //   imageSrc: "https://picsum.photos/id/1024/1200/800",
-  //   author: "Alumni Association",
-  //   date: "June 08, 2023",
-  //   readTime: "9 min",
-  //   url: "#"
-  // },
-  // {
-  //   title: "Student Mental Health Resources",
-  //   excerpt:
-  //     "Comprehensive guide to mental health services available to all students",
-  //   imageSrc: "https://picsum.photos/id/1040/1200/800",
-  //   author: "Wellness Center",
-  //   date: "July 12, 2023",
-  //   readTime: "5 min",
-  //   url: "#"
-  // }
+  {
+    title: "Your True Partner for Wealth Creation",
+    imageSrc: img4,
+  },
+  {
+    title: "Your True Partner for Wealth Creation",
+    imageSrc: img5,
+  },
+  {
+    title: "Your True Partner for Wealth Creation",
+    imageSrc: img6,
+  }
 ];
 
 const Slider = () => {
@@ -58,11 +56,11 @@ const Slider = () => {
         >
           <div className="overlay"></div>
           <div className="slide-content">
-            <h1>
-              <a href={post.url} style={{ color: "white", textDecoration: "none" }} target="_blank" rel="noopener noreferrer">
+            {/* <h1>
+              <a href={post.url} style={{ color: "black", textDecoration: "none" }} target="_blank" rel="noopener noreferrer">
                 {post.title}
               </a>
-            </h1>
+            </h1> */}
             <p>{post.excerpt}</p>
             <div className="author">
               {post.author} • {post.date} • {post.readTime}

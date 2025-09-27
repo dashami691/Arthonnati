@@ -29,7 +29,7 @@ const Footer = () => (
         <div className="col-lg-3 col-md-6">
           <h5 className="footer-heading mb-3">About Arthonnati</h5>
           <p className="footer-text small">
-            Arthonnati Financial Services is a trusted mutual fund distributor helping individuals achieve financial growth through smart investment planning.
+            We are trusted Financial Advisor and MFD on mission of improving financial knowledge & awareness of Indian Families. Our aim is to help them during every life phase of wealth protection, creation and smooth distribution. We are proudly doing this since from last 11+ years for 250+ Individuals & Families.
           </p>
           <div className="social-icons">
             <a href="#" className="social-link">

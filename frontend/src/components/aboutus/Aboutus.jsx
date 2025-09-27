@@ -11,7 +11,7 @@ const AboutCard = () => {
           <div className="sep-leaf-left"></div>
           <div>About Us</div>
         </div>
-        <h2 className="wt-title">Transforming Investments Into Prosperity</h2>
+        <h2 className="wt-title">Our True Partner for Wealth Creation</h2>
       </div>
 
 
@@ -19,13 +19,12 @@ const AboutCard = () => {
         <div className="about-card-left">
           <img src={profilePic} alt="Anil Shivaji Kolekar" className="profile-img" />
           <div className="partner-section">
-            <p>Digital Partner</p>
-            <img src={assetplusLogo} alt="AssetPlus Logo" className="partner-logo" />
+            <h4><p>Certified Financial Advisor</p></h4>
           </div>
         </div>
 
         <div className="about-card-right">
-          <h2 className="company-name">Arthonnati Investment Services</h2>
+          <h2 className="company-name">Arthonnati Financial Services</h2>
           <p className="designation">AMFI-Registered Mutual Fund Distributor</p>
           <h3 className="name">Anil Shivaji Kolekar</h3>
           <p className="arn">ARN-142724</p>

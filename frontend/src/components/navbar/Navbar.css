@@ -27,7 +27,7 @@ header {
 .top-tab {
   display: flex;
   justify-content: space-between;
-  background-color: var(--light-gray);
+  background-color: var(--light-light);
   padding: 6px 20px;
   font-size: 14px;
   color: var(--text-dark);
@@ -62,10 +62,91 @@ header {
   padding: 10px 20px;
 }
 
+/* Multiple logo group */
+.logo-group {
+  gap: 12px;
+}
+
+/* Contact info placed to the right of the logo group */
+.logo-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-and-brand { display: flex; align-items: center; gap: 10px; }
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+.contact-info a { color: var(--text-dark); text-decoration: none; }
+.contact-info a i { margin-right: 6px; color: var(--primary-color); }
+
+.contact-emails { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.contact-emails .contact-email { display: block; }
+
+/* Inline row on larger screens */
+@media (min-width: 769px) {
+  .contact-info { flex-direction: row; gap: 18px; align-items: center; }
+}
+
+/* Hide contact info on very small screens to save space */
+@media (max-width: 350px) {
+  .contact-info { display: none; }
+}
+
+.logo-group .logo {
+  height: 48px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.afs-logo { height: 48px; }
+.afs-name { height: 40px; }
+.assetplus-logo { height: 20px; }
+
+.assetplus-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.powered-by {
+  font-size: 14px; /* increased for better visibility */
+  color: #333;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+}
+
 .logo {
   height: 50px;
   width: auto;
   border-radius: 6px;
+}
+
+/* Override: keep Asset Plus logo visually smaller than the main logo
+   (more specific selector to beat the generic .logo rule above) */
+.logo.assetplus-logo {
+  height: 24px; /* half of .afs-logo (48px) */
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  .logo.assetplus-logo { height: 14px; }
+}
+
+@media (max-width: 350px) {
+  .logo.assetplus-logo { height: 12px; }
 }
 
 /* Navigation Bar */
@@ -91,6 +172,76 @@ header {
 .topnav a:hover {
   background-color: var(--hover-color);
   border-radius: 4px;
+}
+
+/* Login block (right side) */
+.login-block {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-light);
+  font-size: 13px;
+  line-height: 1;
+  text-align: right;
+}
+
+.login-text .planner {
+  font-weight: 600;
+}
+
+.login-text .user-login {
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+.signup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 999px; /* pill */
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.06);
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.signup-btn.primary {
+  background: linear-gradient(180deg, var(--text-light) 0%, #f2f6fb 100%);
+  color: var(--primary-color);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 14px rgba(0,113,185,0.12);
+}
+
+.login-block .signup-btn:not(.primary) {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.95); /* stronger white border */
+  padding: 6px 12px;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.login-block .signup-btn:not(.primary):hover{
+  background: rgba(255,255,255,0.12);
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.14);
 }
 
 /* Hamburger Icon */
@@ -136,6 +287,29 @@ header {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
+  /* When nav is responsive, make login block full width and stacked */
+  .topnav.responsive .login-block {
+    width: 100%;
+    margin-left: 0;
+    padding: 8px 20px;
+    gap: 8px;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  /* Make login buttons full-width and stacked in responsive mode */
+  .topnav.responsive .login-block .signup-btn {
+    width: 100%;
+    margin: 6px 0;
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+
+  .topnav.responsive .login-text {
+    text-align: left;
+    flex-direction: column;
+  }
+
   .topnav .icon {
     display: block;
   }
@@ -161,6 +335,7 @@ header {
   .logo {
     height: 36px;
   }
+  .logo-group .logo { height: 28px; }
   #res_logo {
     height: 28px;
     margin-right: 8px;
@@ -174,6 +349,14 @@ header {
   }
   .topnav .icon {
     font-size: 20px;
+  }
+}
+
+/* Make the Powered by label slightly smaller on small screens */
+@media (max-width: 480px) {
+  .powered-by {
+    font-size: 12px;
+    font-weight: 600;
   }
 }
 
