@@ -147,7 +147,7 @@ const Services = () => (
                 </div>
                 <div className="service-icon-box-content">
                   <p>{service.description}</p>
-                  <a href={service.link} className="site-button-link site-text-primary">
+                  <a className="site-button-link site-text-primary">
                     Read More
                   </a>
                 </div>

@@ -59,6 +59,7 @@ const Footer = () => (
               { name: "about", href: "#about" },
               { name: "contact", href: "#contact" },
               { name: "service", href: "#service" },
+              {name: "testimony", href: "#testimony" }
             ].map((link) => (
               <li className="mb-2" key={link.name}>
                 <a href={link.href} className="footer-link" style={linkStyle}>
@@ -73,21 +74,21 @@ const Footer = () => (
 
         {/* Contact Info */}
         <div className="col-lg-3 col-md-6">
-          <h5 className="footer-heading mb-3">Contact</h5>
+          <h5 className="footer-heading mb-3">Our Address</h5>
           <ul className="list-unstyled footer-text small">
             <li className="mb-2">
-              <i className="bi bi-geo-alt-fill me-2"></i>
-              A/2, Laxmi Complex, Plot-84,<br />
+              <p className="bi bi-geo-alt-fill me-2">A/2, Laxmi Complex, Plot-84,<br />
               Sector-7, Indrayaninagar,<br />
-              Bhosari, Pune 411026
+              Bhosari, Pune 411026</p>
             </li>
             <li className="mb-2">
-              <i className="bi bi-telephone-fill me-2"></i>
-              +91 9876543210
+              <p className="bi bi-telephone-fill me-2"> +91 9011010704</p>
             </li>
             <li className="mb-2">
-              <i className="bi bi-envelope-fill me-2"></i>
-              info@arthonnati.com
+              <p className="bi bi-envelope-fill me-2">
+                arthonnati.fs@gmail.com<br/>
+              anilkolekar25@gmail.com
+              </p>
             </li>
           </ul>
         </div>

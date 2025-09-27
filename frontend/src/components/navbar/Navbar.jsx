@@ -46,8 +46,8 @@ const Navbar = () => {
             <a href="#home" className="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#contact">Knowledge Centre</a>
-            <a href="#contact">Testimony</a>
+            <a href="https://drive.google.com/drive/folders/1OZzH_wdCp684F_olTLSnelgH6I1F5UB0?usp=drive_link">Knowledge Centre</a>
+            <a href="#testimony">Testimony</a>
             <a href="#contact">Contact</a>
             {/* Right-aligned login block with linked buttons */}
             <div className="login-block" role="region" aria-label="user menu">

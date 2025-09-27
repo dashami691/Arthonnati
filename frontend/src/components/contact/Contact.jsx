@@ -4,6 +4,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./contact.css";
 
 const Contact = () => {
+  // Toggle this to true when you want the contact form visible again
+  const SHOW_CONTACT_FORM = false;
+  // Hooks must be called unconditionally — declare them before any early return
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -15,6 +18,8 @@ const Contact = () => {
     newsletter: false,
   });
   const [showPopup, setShowPopup] = useState(false);
+
+  if (!SHOW_CONTACT_FORM) return null;
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
